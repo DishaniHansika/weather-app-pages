@@ -71,11 +71,9 @@ input[type=text]{
   margin: 5px;
   background-color: rgba(98, 126, 150,0.8);
 }
-.weatherChangeWeek{
- 
-}
+
 .temperatureWeek{
-  margin: 10px;
+  margin: 8px;
   padding: 10px;
 }
 .day{
