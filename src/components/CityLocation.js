@@ -29,8 +29,8 @@ const CityLocation=()=>{
             <div className="cityLocationWeather">
                 <Weather weatherData={cityWeather}/>
             </div>
-            ):<div style={{margin:"10px",border:"none", padding:"10px", borderRadius:"4px", fontWeight:"bold",backgroundColor:"rgba(200, 200, 210, 0.9)"}}
-                onClick={()=>history.push(`/weeklyforecast`)}>Weekly Forecast</div>}
+            ):<div className="weeklyBtn" 
+                onClick={()=>history.push(`/weeklyforecast`)}>7-Day Forecast</div>}
       </div>    
 
         

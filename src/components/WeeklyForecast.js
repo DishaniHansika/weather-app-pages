@@ -22,9 +22,10 @@ const WeeklyForecast=(props)=>{
     }, [lati,longi])
   
     return (
-      <div className="dataDiv" style={{backgroundImage:"url(/weather1.jpg)",backgroundSize:"cover", padding:"10%"}}>   
+      <div className="dataDiv" style={{backgroundImage:"url(/weather5.jpg)",backgroundSize:"cover", padding:"10%", height:"1100px"}}>   
         {(typeof weatherData.daily!='undefined') ? (
             <div className="chartWeather">
+              <h2>7-Day Forecast</h2><br/>
               <WeatherChart weatherChartData={weatherData}/>
             </div>   
         ):<div></div>}

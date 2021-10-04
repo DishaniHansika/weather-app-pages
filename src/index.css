@@ -63,5 +63,32 @@ input[type=text]{
   padding: 25px;
 }
 .weatherIcon{
-  padding: 15px;
+  padding: 0px 10px;
+}
+.weatherDataWeek{
+  float: left;
+  padding:12px;
+  margin: 5px;
+  background-color: rgba(98, 126, 150,0.8);
+}
+.weatherChangeWeek{
+ 
+}
+.temperatureWeek{
+  margin: 10px;
+  padding: 10px;
+}
+.day{
+  font-weight: bold;
+}
+.weeklyBtn{
+  margin:50px 10px;
+  border:none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: rgba(40, 100, 160, 0.9);
+}
+.weeklyBtn:hover{
+  border:2px solid  rgba(14, 39, 64, 0.9);
 }
