@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import {useHistory} from "react-router-dom"
 import Axios from 'axios';
 import Weather from "./Weather";
 
@@ -16,7 +17,7 @@ const CityLocation=()=>{
         setCityWeather(searchResponse.data);
         setCity('');
     }
-    
+    let history=useHistory();
     return(
         <div className="cityDiv" style={{backgroundImage:"url(/weather.png)",backgroundSize:"cover", padding:"10%"}}>
             <form className="search" onSubmit={handleSubmit}>
@@ -28,7 +29,8 @@ const CityLocation=()=>{
             <div className="cityLocationWeather">
                 <Weather weatherData={cityWeather}/>
             </div>
-            ):<div></div>}
+            ):<div style={{margin:"10px",border:"none", padding:"10px", borderRadius:"4px", fontWeight:"bold",backgroundColor:"rgba(200, 200, 210, 0.9)"}}
+                onClick={()=>history.push(`/weeklyforecast`)}>Weekly Forecast</div>}
       </div>    
 
         
