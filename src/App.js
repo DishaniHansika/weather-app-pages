@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CityLocation from "./components/CityLocation";
-import CurrentLocation from "./components/CurrentLocation";
 import WeeklyForecast from "./components/WeeklyForecast";
 
 function App() {
