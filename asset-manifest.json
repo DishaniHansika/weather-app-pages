@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/weather-app-pages/static/css/main.90dfd1b7.chunk.css",
-    "main.js": "/weather-app-pages/static/js/main.c98a79f9.chunk.js",
-    "main.js.map": "/weather-app-pages/static/js/main.c98a79f9.chunk.js.map",
+    "main.js": "/weather-app-pages/static/js/main.f3ea36ef.chunk.js",
+    "main.js.map": "/weather-app-pages/static/js/main.f3ea36ef.chunk.js.map",
     "runtime-main.js": "/weather-app-pages/static/js/runtime-main.971b5c38.js",
     "runtime-main.js.map": "/weather-app-pages/static/js/runtime-main.971b5c38.js.map",
     "static/js/2.329b2d33.chunk.js": "/weather-app-pages/static/js/2.329b2d33.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.971b5c38.js",
     "static/js/2.329b2d33.chunk.js",
     "static/css/main.90dfd1b7.chunk.css",
-    "static/js/main.c98a79f9.chunk.js"
+    "static/js/main.f3ea36ef.chunk.js"
   ]
 }
