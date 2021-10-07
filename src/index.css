@@ -32,7 +32,7 @@ input[type="text"] {
 }
 
 .weather-data {
-  color: aliceblue;
+  color: rgb(149, 150, 150);
   font-size: 25px;
 }
 .location {
