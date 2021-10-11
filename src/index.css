@@ -32,7 +32,7 @@ input[type="text"] {
 }
 
 .weather-data {
-  color: rgb(149, 150, 150);
+  color: rgb(245, 245, 245);
   font-size: 25px;
 }
 .location {
@@ -83,6 +83,7 @@ input[type="text"] {
   border: 2px solid rgba(14, 39, 64, 0.9);
 }
 
-.MuiCircularProgress-colorPrimary {
+
+/*.MuiCircularProgress-colorPrimary {
   color: white !important;
-}
+}*/

@@ -3,6 +3,7 @@ import Axios from "axios";
 import WeatherChart from "./WeatherChart";
 import { CircularProgress } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import backgoundImg from "./weather5.jpg";
 
 const WeeklyForecast = () => {
   const [lati, setLatitude] = useState("");
@@ -16,11 +17,17 @@ const WeeklyForecast = () => {
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
       });
-
-      const weeklyResponse = await Axios.get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${lati}&lon=${longi}&exclude=minutely,hourly&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-      );
-      setWeatherData(weeklyResponse.data);
+      try {
+        const weeklyResponse = await Axios.get(
+          `https://api.openweathermap.org/data/2.5/onecall?lat=${lati}&lon=${longi}&exclude=minutely,hourly&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+        );
+        setWeatherData(weeklyResponse.data);
+      } catch (e) {
+        const weeklyResponse = await Axios.get(
+          `https://api.openweathermap.org/data/2.5/onecall?lat=6.9271&lon=79.8612&exclude=minutely,hourly&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+        );
+        setWeatherData(weeklyResponse.data);
+      }
     };
     fetchWeeklyData();
   }, [lati, longi]);
@@ -29,7 +36,7 @@ const WeeklyForecast = () => {
     <div
       className="dataDiv"
       style={{
-        backgroundImage: "url(/weather5.jpg)",
+        backgroundImage: `url(${backgoundImg})`,
         backgroundSize: "cover",
         padding: "10%",
         height: "1200px",

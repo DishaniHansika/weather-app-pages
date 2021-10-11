@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import Weather from "./Weather";
 import CurrentLocation from "./CurrentLocation";
+import backgroundImg from "./weather.png";
 
 const CityLocation = () => {
   const [city, setCity] = useState("");
@@ -20,6 +21,7 @@ const CityLocation = () => {
     setCityWeather(searchResponse.data);
     setCity("");
   };
+
   const refresh = () => {
     window.location.reload();
   };
@@ -29,7 +31,7 @@ const CityLocation = () => {
     <div
       className="cityDiv"
       style={{
-        backgroundImage: "url(/weather.png)",
+        backgroundImage: `url(${backgroundImg})`,
         backgroundSize: "cover",
         padding: "10%",
       }}

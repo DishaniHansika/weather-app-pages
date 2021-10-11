@@ -14,12 +14,18 @@ const CurrentLocation = () => {
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
       });
-
-      const response = await Axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${process.env.REACT_APP_API_KEY}`
-      );
-      setWeather(response.data);
-      console.log(response.data);
+      try {
+        const response = await Axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${process.env.REACT_APP_API_KEY}`
+        );
+        setWeather(response.data);
+        console.log(response.data);
+      } catch (e) {
+        const response = await Axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=6.9271&lon=79.8612&appid=${process.env.REACT_APP_API_KEY}`
+        );
+        setWeather(response.data);
+      }
     };
     fetchData();
   }, [lati, longi]);
